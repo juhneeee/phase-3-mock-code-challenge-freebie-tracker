@@ -6,6 +6,6 @@ class Company < ActiveRecord::Base
         Freebie.create(item_name: item_name, value: value, dev_id:dev.id, company_id: self.id)
     end
     def self.oldest_company
-        self.order(:founding_year).last
+        self.order(:founding_year).first
     end
 end
